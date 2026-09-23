@@ -2,19 +2,6 @@
 
 A two-sprint project exploring two approaches to adapting a large language model (Qwen) for the financial domain: **supervised fine-tuning** and **retrieval-augmented generation (RAG)** — with a comparative evaluation of both against each other and against a TF-IDF baseline.
 
-## Table of Contents
-- [Overview](#overview)
-- [Problem Statement](#problem-statement)
-- [Dataset](#dataset)
-- [Project Structure](#project-structure)
-- [Setup](#setup)
-- [Sprint 1: Fine-Tuning](#sprint-1-fine-tuning)
-- [Sprint 2: RAG](#sprint-2-rag)
-- [Evaluation](#evaluation)
-- [Results](#results)
-- [Discussion: RAG vs Fine-Tuning vs TF-IDF](#discussion-rag-vs-fine-tuning-vs-tf-idf)
-- [License](#license)
-
 ## Overview
 
 This project builds and compares two systems for answering financial questions grounded in company filings:
@@ -43,39 +30,6 @@ Both are evaluated on the same held-out test set and compared against a classica
 
 The `CONTEXT` field serves as the RAG corpus source; `QUERY`/`ANSWER` pairs serve as the fine-tuning supervision signal.
 
-## Project Structure
-
-```
-.
-├── data/
-│   ├── raw/                    # original dataset files
-│   ├── processed/              # cleaned, deduplicated data
-│   └── splits/                 # train / val / test
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_data_preparation.ipynb
-│   ├── 03_fine_tuning.ipynb
-│   ├── 04_embeddings_rag.ipynb
-│   └── 05_evaluation.ipynb
-├── src/
-│   ├── data_prep.py
-│   ├── fine_tune.py
-│   ├── rag_pipeline.py
-│   └── evaluate.py
-├── models/
-│   └── qwen-finetuned-adapter/ # saved LoRA adapter weights
-├── vector_store/                # FAISS/Chroma index
-├── requirements.txt
-└── README.md
-```
-
-## Setup
-
-```bash
-git clone <repo-url>
-cd <repo-name>
-pip install -r requirements.txt
-```
 
 **requirements.txt**
 ```
@@ -119,31 +73,3 @@ huggingface_hub
 4. **Retrieval + generation evaluation** — precision@k, recall@k, MRR, faithfulness, answer relevancy (via RAGAS).
 5. **TF-IDF baseline** — classical sparse retrieval compared against dense embedding retrieval.
 
-## Evaluation
-
-| Component | Metrics |
-|---|---|
-| Fine-tuned model (generation) | ROUGE, BLEU, exact match / F1 |
-| RAG retrieval | Precision@k, Recall@k, MRR |
-| RAG generation | Faithfulness, answer relevancy, context precision/recall (RAGAS) |
-| TF-IDF vs embeddings | Retrieval precision/recall comparison |
-
-## Results
-
-> *[Fill in after running experiments: metric tables, example outputs, before/after comparisons.]*
-
-## Discussion: RAG vs Fine-Tuning vs TF-IDF
-
-| | Fine-tuning | RAG | TF-IDF |
-|---|---|---|---|
-| Learns | Behavior/format/style | Nothing (retrieval only) | Nothing (keyword matching) |
-| Knowledge updates | Requires retraining | Instant (update index) | Instant (update index) |
-| Factual grounding | Weak / prone to hallucination | Strong (source-grounded) | N/A (retrieval only) |
-| Semantic matching | N/A | Strong | Weak (exact-term only) |
-| Setup cost | High (GPU, training time) | Moderate | Low |
-
-**Conclusion:** *[Fill in based on your results — typically RAG suits fact-grounded QA better, fine-tuning suits consistent behavior/format, and combining both often performs best.]*
-
-## License
-
-*[Specify license, e.g., MIT]*
