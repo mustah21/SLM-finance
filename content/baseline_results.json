@@ -1,0 +1,23 @@
+[
+  {
+    "company_id": "SUBROS_2023_converted.txt_1",
+    "context": "Symbol: SUBROS Company Name: Subros Ltd. EQUITIES AND LIABILITIES: nan SHAREHOLDER'S FUNDS: nan Equity Share Capital: 13.05 Total Share Capital: 13.05 Reserves and Surplus: 854.08 Total Reserves and Surplus: 854.08 Total Shareholders Funds: 867.12 NON-CURRENT LIABILITIES: nan Long Term Borrowings: 4.69 Deferred Tax Liabilities [Net]: 33.71 Other Long",
+    "question": "What is the total reserves and surplus of the company?",
+    "reference_answer": "The total reserves and surplus of the company are 854.08.",
+    "baseline_answer": "The total reserves and surplus of the company is 854.08."
+  },
+  {
+    "company_id": "AYMSYNTEX_2023_converted.txt_0",
+    "context": "Symbol: AYMSYNTEX Company Name: AYM Syntex Ltd. EQUITIES AND LIABILITIES: nan SHAREHOLDER'S FUNDS: nan Equity Share Capital: 50.35 Total Share Capital: 50.35 Reserves and Surplus: 366.86 Total Reserves and Surplus: 366.86 Total Shareholders Funds: 420.25 NON-CURRENT LIABILITIES: nan Long Term Borrowings: 151.62 Deferred Tax Liabilities [Net]: 0 Other",
+    "question": "What is the equity share capital of the company?",
+    "reference_answer": "The equity share capital of the company is 50.35.",
+    "baseline_answer": "The equity share capital of the company is £50.35."
+  },
+  {
+    "company_id": "SHANTIGEAR_2023_converted.txt_3",
+    "context": "Liabilities: 75.07 Total Capital And Liabilities: 377.9 ASSETS: nan NON-CURRENT ASSETS: nan Tangible Assets: 62.96 Intangible Assets: 0.15 Capital Work-In-Progress: 2.03 Other Assets: 7.13 Fixed Assets: 72.27 Non-Current Investments: 20.21 Deferred Tax Assets [Net]: 4.43 Long Term Loans And Advances: 0 Other Non-Current Assets: 10.53 Total Non-Current",
+    "question": "What is the total value of assets of the company?",
+    "reference_answer": "377.9",
+    "baseline_answer": "The total value of assets for the company, as shown in the given data, is 377.9."
+  }
+]

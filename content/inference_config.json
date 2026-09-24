@@ -1,0 +1,15 @@
+{
+  "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "system_prompt": "You are a financial question-answering assistant. Answer the question using only the provided context. Give a concise answer and preserve the numbers and units stated in the context. Do not invent missing information.",
+  "user_template": "Context:\n{context}\n\nQuestion:\n{question}",
+  "max_new_tokens": 128,
+  "do_sample": false,
+  "seed": 42,
+  "split_sizes": {
+    "train": 2959,
+    "validation": 740,
+    "test": 927
+  },
+  "best_checkpoint": "/content/financeqa_training_1epoch/checkpoint-740",
+  "best_validation_loss": 0.3347971439361572
+}
