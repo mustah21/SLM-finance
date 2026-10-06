@@ -13,7 +13,7 @@ Both are evaluated on the same held-out test set and compared against a classica
 
 ## Problem Statement
 
-> *[Fill in: e.g., "Given a financial question about a company's 10-K filing, produce an accurate, source-grounded answer."]*
+> *[Example: "Given a financial question about a company's 10-K filing, produce an accurate, source-grounded answer."]*
 
 **Domain:** Finance (company filings / financial statements)
 
