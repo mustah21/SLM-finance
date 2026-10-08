@@ -8,6 +8,7 @@ This project builds and compares two systems for answering financial questions g
 
 1. **Fine-tuned Qwen model** — trained on question–answer pairs to learn domain-specific response behavior.
 2. **RAG pipeline** — retrieves relevant passages from a document corpus via vector search and generates grounded answers.
+3. **Weights — HuggingFace** —  [Fine-tuned weights](https://huggingface.co/mustafahmad/ML-finance-10/tree/main)
 
 Both are evaluated on the same held-out test set and compared against a classical TF-IDF retrieval baseline.
 
